@@ -4,13 +4,6 @@ class Book {
     public $title;
     public $author;
     public $id;
-	
-    public function __construct($title, $author, $id)  
-    {  
-     $this->title = $title;
-     $this->author = $author;
-     $this->id = $id;
-    } 
     
     public function setId($id){
         $this->id = $id;
