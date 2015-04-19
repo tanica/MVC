@@ -13,19 +13,28 @@
  */
 
 include_once("model/Model.php");
+include_once("common/DbConn.php");
+include_once("mapper/BookMapper.php");
 class IndexController {
     //put your code here
     public $model;
+    public $bookMapper;
     
     public function __construct()  
     {  
         $this->model = new Model();
-
+        $db = & DbConn::getInstance();
+        $bookMapper = new BookMapper($db);
+        $this->bookMapper = $bookMapper;
+       
     } 
     
     public function index(){
 	if (!isset($_GET['book'])){
-            $books = $this->model->getBookList();
+            //$books = $this->model->getBookList();
+            
+            $booklist =  $this->bookMapper->getBookList();
+            
             include 'view/booklist.php';
 	}
 	else

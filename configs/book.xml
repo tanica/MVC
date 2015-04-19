@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fieldlist>
+    <field>
+        <name>id</name>
+    </field>
+    <field>
+        <name>author</name>
+    </field>
+    <field>
+        <name>title</name>
+    </field>
+</fieldlist> 
