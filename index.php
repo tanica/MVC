@@ -7,6 +7,10 @@
  */
 
 include_once("controller/IndexController.php");
-
+include_once("common/DbConn.php");
 $controller = new IndexController();
 $controller->index();
+
+$db = & DbConn::getInstance();
+
+print_r($db);
